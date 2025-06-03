@@ -32,7 +32,8 @@ print(f"""
                                                                     
                                                                     
                                                                     
-                                                                 Press any key to Continue
+                                                                 Press
+                                                                  any key to Continue
 [0m
 """)
 os.system("pause > nul")
