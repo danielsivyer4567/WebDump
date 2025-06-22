@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> PropertEASE-Automated Town Planning Property Reports </title>
+        <meta name="description" content="Have the knowledge of a town planner at your fingertips. Find out the development potential of any property by just typing in your address. Our instant property reports allow you to make an informed decision when buying or selling a property. Unlimited monthly subscriptions, and single reports are available."/>
+        <link rel="shortcut icon" href="https://propertease.com.au/public/images/favicon.ico" type="image/x-icon">
+    
+        <script>
+            var BaseUrl = "https://propertease.com.au/";
+            var PublicUrl = "https://propertease.com.au/public";
+			var Version = "2.7.0";
+        </script>
+        <link rel='stylesheet' href='https://propertease.com.au/public/libs/bootstrap/css/bootstrap.min.css'><link rel='stylesheet' href='https://propertease.com.au/public/libs/fontAwesome/css/font-awesome.min.css'><link rel='stylesheet' href='https://propertease.com.au/public/libs/toastr/toastr.css'><link rel='stylesheet' href='https://propertease.com.au/public/libs/parsley/parsley.css'><link href="https://propertease.com.au/public/css/pe_min_home.index.2.7.0.min.css?v=d9e9e2bf29f661625ef6f2ed7033e664" rel="stylesheet" type="text/css" />
+         <!--Start of Zendesk Chat Script-->
+        <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="https://v2.zopim.com/?4kPdWaiuG5jv8NFBbUvdZjQL0S3fWado";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+        </script>
+        <!--End of Zendesk Chat Script-->
+
+        <!--Start Google Analytics-->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-73310620-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!--End Google Analytics-->
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1914024712210969'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1914024712210969&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+
+    </head>
+    <body class="">
+        <div class="main-container">
+            <header class="main-header">
+    <div class="wrapper">
+        <div class="logo">
+            <a href="https://propertease.com.au/home" class="">
+                <img src="https://propertease.com.au/public/images/logo.png" alt="">
+            </a>
+        </div>
+        
+        <nav class="main-menu">
+            <button class="menu-trigger fa fa-bars"></button>
+            <ul class="main-menu-list">
+                <li><a href="https://propertease.com.au/getStarted">Get Started</a></li>
+                <li><a href="https://propertease.com.au/plans">Plans</a></li>
+                <li><a href="https://propertease.com.au/sampleReport">Sample Report</a></li>
+                <li><a href="https://propertease.com.au/news">News</a></li>
+                <li><a href="https://propertease.com.au/help-and-faq">Help &amp; FAQ</a></li>
+                <li><a href="https://propertease.com.au/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <a href="#" class="modal-btn login-link js-login-link">Login</a>
+            <span class="slash">/</span>
+            <a href="https://propertease.com.au/account/createAccount" class="modal-btn login-link js-signup-link">Sign Up</a>
+            <a href="#" class="modal-btn mobile-login fa fa-user-plus js-login-link"></a>
+        </div>
+
+        
+    </div>
+</header>
+<div id="registerModal">
+    <div id="popup-background" class="popup-background"></div>
+    <div class="popup-form popup-form-pass-recovery" id="password-recovery">
+        <div class="logo">
+            <a href="#" class="">
+                <img src="https://propertease.com.au/public/images/logo.png" alt="">
+            </a>
+        </div>
+        <form></form>
+        <form action="https://propertease.com.au/account/forgotPassword" class="password-recovery" data-parsley-validate="" method="post" accept-charset="utf-8">        <div class="popup-content">
+            <h4>Password recovery</h4>
+            <p>Please enter the email address for your account.</p>
+            <p>A verification code will be sent to you.</p>
+            <p>Once you have received the verification code, you will be able to choose a new password for your account.</p>
+            <div class="form-group email-group">
+                <input name="email" required='true' data-parsley-type="email" class="input icon-input3" placeholder="Email">
+            </div>
+            <input type="submit" class="button" value="Submit">
+        </div>
+        </form>    </div>
+    <div class="popup-form popup-form-pass-recovery" id="resend-email-activation">
+        <a href="#" class="close-btn exit">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <div class="logo">
+            <a href="#" class="">
+                <img src="https://propertease.com.au/public/images/logo.png" alt="">
+            </a>
+        </div>
+        <form></form>
+        <form action="https://propertease.com.au/account/resendActivationEmail" class="password-recovery" data-parsley-validate="" method="post" accept-charset="utf-8">        <div class="popup-content">
+            <h4>Email activation</h4>
+            <p>Please enter the email address for your account.</p>
+            <p>An activation email will be sent to you again.</p>
+            <div class="form-group email-group hidden">
+                <input type="email" name="email" class="input icon-input3" placeholder="Email">
+            </div>
+			<div class="form-group email-group">
+				<input name="safe_email" required='true' data-parsley-type="email" class="input icon-input3" placeholder="Email">
+			</div>
+            <input type="submit" class="button" value="Submit">
+        </div>
+        </form>    </div>
+    <div class="popup-form popup-login-form" id="login-form">
+        <div class="logo">
+            <a href="#" class="">
+                <img src="https://propertease.com.au/public/images/logo.png" alt="">
+            </a>
+        </div>
+        <form action="https://propertease.com.au/account/login" class="login-form" id="loginForm" method="post" accept-charset="utf-8">        <div class="popup-content">
+            <h4>Log in to your account</h4>
+            <div class="form-group1">
+                <div class="form-group">
+                    <input id='email' required='true' data-parsley-type="email" class="input icon-input3" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                    <input required='true' id='password' type="password" class="input icon-input9" placeholder="Password" name="password">
+                </div>
+                <span class="error-message-container login-error-message"></span>
+            </div>
+            <div class="form-group2">
+                <input id="remember" type="checkbox" value='true' name="remember" checked>
+                <label for="remember">Remember me</label>
+                <a href="#" class="form-link js-forgot-pass-link">Forgot Password?</a>
+            </div>
+            <button type='button' id="logIn" class="button">Log In</button>
+            <p>Don't have account?
+                <a href="https://propertease.com.au/account/createAccount" class="form-link js-signup-link">Sign Up</a>
+            </p>
+            <div class="social-form-group">
+                <span>or</span>
+                <p>Log in using following services:</p>
+                <a title="Facebook" href="https://propertease.com.au/account/logInBySocialProvider/Facebook" class="social-icon facebook btn-primary"></a>
+                <a title="Google" href="https://propertease.com.au/account/logInBySocialProvider/Google" class="social-icon google btn-danger"></a>
+                <a title ="LinkedIn" href="https://propertease.com.au/account/logInBySocialProvider/LinkedIn" class="social-icon linkedin btn-info"></a>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <p>By logging in, you agree to our
+                <a target="_blanket" href="https://propertease.com.au/terms-and-conditions" class="form-link"
+                    href="#">Terms and Conditions</a>
+            </p>
+        </div>
+        </form>    </div>
+</div>
+
+
+            <main>
+                
+                <section class="banner-section home-banner-section">
+    <div class="wrapper">
+        <div class="banner-wrapper">
+            <div class="banner-content">
+                <h5>Find out the development potential of</h5>
+                <h1>any property with the click of a button</h1>
+                <div class="button-group">
+                    <a href="https://propertease.com.au/getStarted" class="button">Get Started</a>
+                    <a href="https://propertease.com.au/sampleReport" class="button transparent">view sample report</a>
+                </div>
+                <div class="supported-by-block">
+                    <p>Proudly supported by:</p>
+                    <a target="_blank" href="https://advance.qld.gov.au">
+                        <img src="https://propertease.com.au/public/images/supported-by-img.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="banner-img-wrapper">
+                <div class="banner-price orange">
+                    <span>First report</span>
+                    <span class="cost">free</span>
+                    <span>No Card/Signup Required</span>
+                </div>
+                <img src="https://propertease.com.au/public/images/banner-img.png" alt="">
+            </div>
+        </div>
+        <div class="banner-search-box">
+            <h4>Search your property below to find out its potential:</h4>
+            <div class="search-field search-form">
+                <input class="input" id="search-input" type="text" placeholder="Enter property address here" autocomplete="off">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="work-section home-work-section">
+    <div class="wrapper">
+        <div class="how-it-work">
+            <h2>How Does It Work?</h2>
+            <div class="work-list-item">
+                <div class="icon-wrapper">
+                    <img src="https://propertease.com.au/public/images/work-icon1.png" alt="icon">
+                </div>
+                <div class="text">
+                    <span class="number">1</span>
+                    <h5>Enter<br>
+                        property address</h5>
+                </div>
+            </div>
+            <div class="work-list-item">
+                <div class="icon-wrapper">
+                    <img src="https://propertease.com.au/public/images/work-icon3.png" alt="icon">
+                </div>
+                <div class="text">
+                    <span class="number">2</span>
+                    <h5>Submit,<br>
+                        review, download</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="macbook" src="https://propertease.com.au/public/images/macbook.png" alt="how-work-img">
+</section>
+<section class="get-report">
+    <div class="wrapper">
+        <img src="https://propertease.com.au/public/images/get-report-australia.png" alt="australia">
+        <div class="content clrearfix">
+            <div class="text">
+                <h3>Learn the facts about your property instantly.</h3>
+                <p>Our proprietary database gets you the facts quickly and easily.<br/> We’re currently servicing SE Queensland via the following councils; Queensland Councils: Brisbane, Logan, <br> Moreton Bay, Gold Coast, Sunshine Coast, Ipswich, Toowoomba and Redland City with more to come.</p>
+            </div>
+            <a href="https://propertease.com.au/plans" class="button on-background">Choose Your Plan</a>
+        </div>
+    </div>
+</section>
+<section class="video-section">
+    <div class="wrapper video-wrapper">
+        <iframe src="https://www.youtube.com/embed/UFpbrCTWyw8"></iframe>
+    </div>
+</section>
+<section class="benefit-section">
+    <div class="wrapper">
+        <h2>BENEFITS FOR YOU</h2>
+        <div id="dd" class="benefit-menu">
+            <span>Architect</span>
+            <ul class="dropdown" id="items">
+                <li data-tab="#tab1" class="active">architect</li>
+                <li data-tab="#tab2">developer</li>
+                <li data-tab="#tab3">town planner</li>
+                <li data-tab="#tab4">real estate agent</li>
+                <li data-tab="#tab5">builder</li>
+                <li data-tab="#tab6">investor</li>
+            </ul>
+        </div>
+        <div class="tabs">
+                <div id="tab1" class="benefit-tab">
+                    <div class="wrapper">
+                        <div class="column">
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon1.png" alt="benefit-icon">
+                                <h5>Save time and money</h5>
+                                <p>Whether you’re thinking about subdividing your property or wondering whether you can build that extension you’ve been dreaming about, discover the answers immediately, and avoid paying exorbitant costs for a town planner on a house you may never buy.</p>
+                            </div>
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon4.png" alt="benefit-icon">
+                                <h5>fast feedback</h5>
+                                <p>Know all the facts about development and risks fast, before someone else makes an offer first. Rather than wait days for a town planner to get your report back to you, you can receive all the facts at the touch of a button.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon2.png" alt="benefit-icon">
+                                <h5>24/7 access</h5>
+                                <p>With around the clock access you can browse property’s from your couch and find out essential property information straight away, rather than wait for office hours to get the answers you need.</p>
+                            </div>
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon5.png" alt="benefit-icon">
+                                <h5>easy to use app</h5>
+                                <p>Add the address, view and download. Simple! No complicated programs to learn, no new skills required. Anyone in the office can use it, from admin to sales associates.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon3.png" alt="benefit-icon">
+                                <h5>instant reports</h5>
+                                <p>So, you’re considering bidding on a property but aren’t sure if the renovation or subdivision you had in mind is possible? Find out the answers before other potential bidders do, so you’re in control.</p>
+                            </div>
+                            <div class="benefits-item">
+                                <img src="https://propertease.com.au/public/images/benefit-icon6.png" alt="benefit-icon">
+                                <h5>relevant information</h5>
+                                <p>Find out all the critical information about your property BEFORE you sign the paperwork. Know for sure that you can undertake the renovations you’ve envisioned on your future home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+    <section class="related-posts-section ">
+        <h2>Latest news</h2>
+        <div class="row">
+            
+<article id="post-264" class="post-264 post type-post status-publish format-standard hentry category-news">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="https://propertease.com.au/news/2023/11/10/weve-almost-produced-100000-reports/" rel="bookmark">We&#8217;ve almost produced 100,000 reports!</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/7e3f5c0fe0fa968e7c3d1c355a24d61e?s=49&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7e3f5c0fe0fa968e7c3d1c355a24d61e?s=98&#038;d=mm&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span>By <a class="url fn n" href="https://propertease.com.au/news/author/alex/"> Alex Steffan</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span>on<a href="https://propertease.com.au/news/2023/11/10/weve-almost-produced-100000-reports/" rel="bookmark"> <time class="entry-date published" datetime="2023-11-10T11:14:13+00:00">10/11/2023</time><time class="updated" datetime="2023-11-05T11:15:15+00:00">05/11/2023</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://propertease.com.au/news/category/news/" rel="category tag">News</a></span><span class="comments-link"><a href="https://propertease.com.au/news/2023/11/10/weve-almost-produced-100000-reports/#respond">Leave a comment<span class="screen-reader-text"> on We&#8217;ve almost produced 100,000 reports!</span></a></span>			</footer><!-- .entry-footer -->
+
+	<div class="entry-content">
+		<p>It&#8217;s crazy to think that we&#8217;ve almost produced 100,000 property reports, and that is in South East Queensland alone! Have an area that you&#8217;d like for us to service? Pop &hellip; <a href="https://propertease.com.au/news/2023/11/10/weve-almost-produced-100000-reports/" class="more-link">Read more<span class="screen-reader-text"> &#8220;We&#8217;ve almost produced 100,000 reports!&#8221;</span></a></p>
+<ul class="social-icons"><li><a href='http://www.facebook.com' title='www.facebook.com' target='_blank'><i class='fa fa-facebook'></i></a></li><li><a href='http://www.twitter.com' title='www.twitter.com' target='_blank'><i class='fa fa-twitter'></i></a></li><li><a href='http://www.linkedin.com' title='www.linkedin.com' target='_blank'><i class='fa fa-linkedin'></i></a></li><li><a href='http://mail.google.com' title='mail.google.com' target='_blank'><i class='fa fa-envelope'></i></a></li></ul>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
+
+<article id="post-262" class="post-262 post type-post status-publish format-standard hentry category-news">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="https://propertease.com.au/news/2023/11/05/nsw-beta-launch/" rel="bookmark">NSW beta launch</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/7e3f5c0fe0fa968e7c3d1c355a24d61e?s=49&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7e3f5c0fe0fa968e7c3d1c355a24d61e?s=98&#038;d=mm&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span>By <a class="url fn n" href="https://propertease.com.au/news/author/alex/"> Alex Steffan</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span>on<a href="https://propertease.com.au/news/2023/11/05/nsw-beta-launch/" rel="bookmark"> <time class="entry-date published updated" datetime="2023-11-05T11:14:07+00:00">05/11/2023</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://propertease.com.au/news/category/news/" rel="category tag">News</a></span><span class="comments-link"><a href="https://propertease.com.au/news/2023/11/05/nsw-beta-launch/#respond">Leave a comment<span class="screen-reader-text"> on NSW beta launch</span></a></span>			</footer><!-- .entry-footer -->
+
+	<div class="entry-content">
+		<p>Hello everyone, we&#8217;ve been very busy over here at PropertEASE launching new areas, updating planning scheme data AND launching the ENTIRE of the NSW region. It&#8217;s currently in beta so &hellip; <a href="https://propertease.com.au/news/2023/11/05/nsw-beta-launch/" class="more-link">Read more<span class="screen-reader-text"> &#8220;NSW beta launch&#8221;</span></a></p>
+<ul class="social-icons"><li><a href='http://www.facebook.com' title='www.facebook.com' target='_blank'><i class='fa fa-facebook'></i></a></li><li><a href='http://www.twitter.com' title='www.twitter.com' target='_blank'><i class='fa fa-twitter'></i></a></li><li><a href='http://www.linkedin.com' title='www.linkedin.com' target='_blank'><i class='fa fa-linkedin'></i></a></li><li><a href='http://mail.google.com' title='mail.google.com' target='_blank'><i class='fa fa-envelope'></i></a></li></ul>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
+        </div>
+        <div class="more-news">
+            <a href="https://propertease.com.au/news" class="button">More news</a>
+        </div>
+    </section>
+<form target="_blank" action="https://www.getdrip.com/forms/107608191/submissions" method="post" data-drip-embedded-form="107608191">
+    <section class="sign-up-section">
+        <div class="sign-up-wrapper">
+            <h2 data-drip-attribute="headline">Get the latest on PropertEASE</h2>
+            <h3>Sign up now</h3>
+            <p data-drip-attribute="description">Sign up now for the latest PropertEASE and property development news. Gain the upperhand, knowledge is power.</p>
+            <div class="form-wrapper">
+                <div class="form-group">
+                    <input class="input icon-input1" id='drip-name' required='true' type="text" placeholder="Name" name="fields[name]">
+                    <input class="input icon-input3" id='drip-email' required='true' name="fields[email]" type="email" placeholder="Email">
+                    <button class="button" type="submit" data-drip-attribute="sign-up-button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+<section class="companies-section">
+    <div class="wrapper">
+        <h2>Companies that use PropertEASE</h2>
+        <div class="companies-logo">
+            <div><img src="https://propertease.com.au/public/images/companies-logo1.png" alt=""></div>
+            <div><img src="https://propertease.com.au/public/images/companies-logo2.png" alt=""></div>
+            <div><img src="https://propertease.com.au/public/images/companies-logo3.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVgHm-u9wz-PmE1kn6HVK98WxwELYblHg&libraries=places"></script>
+<script>
+    var isOpenLoginPopupWindow = false</script>
+
+            </main>
+
+            <footer class="main-footer">
+    <div class="wrapper">
+        <div class="footer-row">
+            <div class="logo"><a href="#" class=""><img src="https://propertease.com.au/public/images/logo.png" alt=""></a></div>
+                <nav class="footer-menu">
+                    <button class="footer-menu-trigger fa fa-bars"></button>
+                                                    <ul class="footer-menu-list">
+                                <li><a href="https://propertease.com.au/getStarted">Get Started</a></li>
+                                <li><a href="https://propertease.com.au/plans">Plans</a></li>
+                                <li><a href="https://propertease.com.au/sampleReport">Sample Report</a></li>
+                                <li><a href="https://propertease.com.au/help-and-faq">Help & FAQ</a></li>
+                                <li><a href="https://propertease.com.au/contact">Contact</a></li>
+                                <li><a href="https://propertease.com.au/terms-and-conditions">Terms &amp; Conditions</a></li> 
+                            </ul>
+                                        </nav>
+            <ul class="social-icons">
+                <li><a target="_blank" href="http://facebook.com/properteaseaus" class="social-icon facebook"></a></li>
+                <li><a target="_blank" href="http://instagram.com/properteaseaus" class="social-icon instagram"></a></li>
+                <li><a target="_blank" href="http://linkedIn.com/company-beta/10681842" class="social-icon linkedin"></a></li>
+            </ul>
+        </div>
+        
+        <div class="copyright">&copy; PropertEASE 2025. All rights Reserved</div>
+    
+    </div>
+</footer>
+        </div>
+        
+        <script src='https://propertease.com.au/public/libs/jquery/jquery-2.1.1.min.js'></script><script src='https://propertease.com.au/public/libs/bootstrap/js/bootstrap.min.js'></script><script src='https://propertease.com.au/public/libs/parsley/parsley.min.js'></script><script src='https://propertease.com.au/public/libs/toastr/toastr.min.js'></script><script src='https://propertease.com.au/public/libs/mustache/mustache.min.js'></script><script type="text/javascript" src="https://propertease.com.au/public/js/pe_min_home.index.2.7.0.min.js?v=abf0b44eac5cee0a84ef59300a8cbf2a"></script>
+        
+         <!-- Hotjar Tracking Code for www.propertease.com.au -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:664824,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- LinkedIn for www.propertease.com.au -->
+<script type="text/javascript">
+_linkedin_data_partner_id = "106862";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=106862&fmt=gif" />
+</noscript>
+
+<!-- Drip -->
+<script type="text/javascript">
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {};
+  _dcs.account = '1007606';
+
+  (function() {
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true;
+    dc.src = '//tag.getdrip.com/1007606.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(dc, s);
+  })();
+</script>
+<!-- end Drip -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 878063616;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/878063616/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+    </body>
+</html>
